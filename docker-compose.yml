@@ -5,7 +5,7 @@
 
 services:
   qdrant:
-    image: qdrant/qdrant:v1.12.4
+    image: qdrant/qdrant:v1.18.0
     container_name: day19-qdrant
     ports:
       - "6333:6333"   # HTTP API + dashboard
@@ -40,7 +40,7 @@ services:
       POSTGRES_PASSWORD: feast
       POSTGRES_DB: feast_offline
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
